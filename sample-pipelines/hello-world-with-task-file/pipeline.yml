@@ -1,0 +1,22 @@
+resources:
+- name: timer
+  type: time
+  source:
+    interval: 5m
+#This resource defines a git repository that will be cloned when required (get) in a job.
+#If it is used as a trigger, the job is triggered when a new commit is made
+- name: repo
+  type: git
+  source:
+    uri: git@github.com:bloeys/cicd-via-concourse.git
+
+jobs:
+- name: say-hello
+  plan:
+  - get: timer
+    trigger: true
+  - get: repo
+
+  #This time the task is in a separate file, which is contained in the repo we specified.
+  - task: say-hello-task
+    file: repo/sample-pipelines/hello-world-with-task-file/tasks/task.yml
