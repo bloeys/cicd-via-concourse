@@ -5,7 +5,7 @@ resources:
     uri: https://github.com/bloeys/cicd-via-concourse.git
 
 jobs:
-- name: say-hello
+- name: count
   plan:
   - get: repo
 
