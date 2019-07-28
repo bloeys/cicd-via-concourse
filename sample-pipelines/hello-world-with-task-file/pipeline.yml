@@ -8,7 +8,7 @@ resources:
 - name: repo
   type: git
   source:
-    uri: git@github.com:bloeys/cicd-via-concourse.git
+    uri: https://github.com/bloeys/cicd-via-concourse.git
 
 jobs:
 - name: say-hello
