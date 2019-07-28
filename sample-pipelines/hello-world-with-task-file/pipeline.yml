@@ -16,7 +16,6 @@ jobs:
   - get: timer
     trigger: true
   - get: repo
-
   #This time the task is in a separate file, which is contained in the repo we specified.
   - task: say-hello-task
     file: repo/sample-pipelines/hello-world-with-task-file/tasks/task.yml
