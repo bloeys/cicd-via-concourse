@@ -7,9 +7,8 @@ image_resource:
 
 #What resources from the pipeline we want as input
 inputs:
-- name: ci-repo
 - name: repo
 
 #Run the script that exists in the resource we requested
 run:
-  path: ci-repo/sample-pipelines/task-and-script/scripts/hello.sh
+  path: repo/sample-pipelines/task-and-script/scripts/hello.sh

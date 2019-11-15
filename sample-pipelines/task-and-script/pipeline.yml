@@ -1,8 +1,4 @@
 resources:
-- name: ci-repo
-  type: git
-  source:
-    uri: https://github.com/bloeys/cicd-via-concourse
 - name: repo
   type: git
   source:
@@ -11,9 +7,8 @@ resources:
 jobs:
 - name: count
   plan:
-  - get: ci-repo
   - get: repo
   - task: count
-    file: ci-repo/sample-pipelines/task-and-script/tasks/task.yml
+    file: repo/sample-pipelines/task-and-script/tasks/task.yml
     params:
       MY_ENV_VAR1: 'Hello'
