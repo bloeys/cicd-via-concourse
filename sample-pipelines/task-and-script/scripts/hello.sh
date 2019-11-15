@@ -1,6 +1,5 @@
 #!/bin/sh
 
-python -v
 cat "repo/README.md"
 cat "repo/descriptor.md"
 
