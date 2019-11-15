@@ -2,13 +2,12 @@ resources:
 - name: repo
   type: git
   source:
-    uri: https://github.com/bloeys/massimo
+    uri: https://github.com/bloeys/cicd-via-concourse.git
 
 jobs:
 - name: count
   plan:
   - get: repo
+  #This time the task is in a separate file, which is contained in the repo we specified.
   - task: count
     file: repo/sample-pipelines/task-and-script/tasks/task.yml
-    params:
-      MY_ENV_VAR1: 'Hello'
