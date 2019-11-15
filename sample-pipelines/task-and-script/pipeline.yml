@@ -12,6 +12,7 @@ jobs:
 - name: count
   plan:
   - get: ci-repo
+    trigger: true
   - get: repo
   - task: count
     file: ci-repo/sample-pipelines/task-and-script/tasks/task.yml
