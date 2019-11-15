@@ -1,8 +1,6 @@
 #!/bin/sh
 
-echo $MY_ENV_VAR1
-
-python --version
+python -v
 cat "repo/README.md"
 cat "repo/descriptor.md"
 
