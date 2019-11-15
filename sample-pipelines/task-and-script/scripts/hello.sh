@@ -1,12 +1,15 @@
 #!/bin/sh
 
-echo "Hello!"
-echo "This is running from a script"
-echo "Printing 1 to 10..."
+cat "repo/README.md"
+cat "repo/descriptor.md"
 
-for x in $(seq 1 10);
-do
-  echo "$x"
-done
+# echo "Hello!"
+# echo "This is running from a script"
+# echo "Printing 1 to 10..."
 
-echo "Finished printing!"
+# for x in $(seq 1 10);
+# do
+#   echo "$x"
+# done
+
+# echo "Finished printing!"
